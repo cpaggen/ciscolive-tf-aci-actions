@@ -8,11 +8,10 @@ terraform {
 }
 
 provider "aci" {
-  username    = var.aciUser
-  private_key = var.aciPrivateKey
-  cert_name   = var.aciCertName
-  insecure    = true
-  url         = var.aciUrl
+  username = var.aciUser
+  password = var.aciPassword
+  insecure = true
+  url      = var.aciUrl
 }
 
 resource "aci_tenant" "mytenant" {
